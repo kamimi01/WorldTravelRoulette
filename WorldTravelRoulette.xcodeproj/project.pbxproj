@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D49D203129774EE00050EA60 /* WorldTravelRouletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D203029774EE00050EA60 /* WorldTravelRouletteApp.swift */; };
+		D49D203329774EE00050EA60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D203229774EE00050EA60 /* ContentView.swift */; };
+		D49D203529774EE20050EA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49D203429774EE20050EA60 /* Assets.xcassets */; };
+		D49D203829774EE20050EA60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49D203729774EE20050EA60 /* Preview Assets.xcassets */; };
+		D49D204229774EE20050EA60 /* WorldTravelRouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D204129774EE20050EA60 /* WorldTravelRouletteTests.swift */; };
+		D49D204C29774EE20050EA60 /* WorldTravelRouletteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D204B29774EE20050EA60 /* WorldTravelRouletteUITests.swift */; };
+		D49D204E29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D204D29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D49D203E29774EE20050EA60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D49D202529774EE00050EA60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49D202C29774EE00050EA60;
+			remoteInfo = WorldTravelRoulette;
+		};
+		D49D204829774EE20050EA60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D49D202529774EE00050EA60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49D202C29774EE00050EA60;
+			remoteInfo = WorldTravelRoulette;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D49D202D29774EE00050EA60 /* WorldTravelRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTravelRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49D203029774EE00050EA60 /* WorldTravelRouletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelRouletteApp.swift; sourceTree = "<group>"; };
+		D49D203229774EE00050EA60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D49D203429774EE20050EA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D49D203729774EE20050EA60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D49D203D29774EE20050EA60 /* WorldTravelRouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTravelRouletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49D204129774EE20050EA60 /* WorldTravelRouletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelRouletteTests.swift; sourceTree = "<group>"; };
+		D49D204729774EE20050EA60 /* WorldTravelRouletteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTravelRouletteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49D204B29774EE20050EA60 /* WorldTravelRouletteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelRouletteUITests.swift; sourceTree = "<group>"; };
+		D49D204D29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelRouletteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D49D202A29774EE00050EA60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D203A29774EE20050EA60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D204429774EE20050EA60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D49D202429774EE00050EA60 = {
+			isa = PBXGroup;
+			children = (
+				D49D202F29774EE00050EA60 /* WorldTravelRoulette */,
+				D49D204029774EE20050EA60 /* WorldTravelRouletteTests */,
+				D49D204A29774EE20050EA60 /* WorldTravelRouletteUITests */,
+				D49D202E29774EE00050EA60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D49D202E29774EE00050EA60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D49D202D29774EE00050EA60 /* WorldTravelRoulette.app */,
+				D49D203D29774EE20050EA60 /* WorldTravelRouletteTests.xctest */,
+				D49D204729774EE20050EA60 /* WorldTravelRouletteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D49D202F29774EE00050EA60 /* WorldTravelRoulette */ = {
+			isa = PBXGroup;
+			children = (
+				D49D203029774EE00050EA60 /* WorldTravelRouletteApp.swift */,
+				D49D203229774EE00050EA60 /* ContentView.swift */,
+				D49D203429774EE20050EA60 /* Assets.xcassets */,
+				D49D203629774EE20050EA60 /* Preview Content */,
+			);
+			path = WorldTravelRoulette;
+			sourceTree = "<group>";
+		};
+		D49D203629774EE20050EA60 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D49D203729774EE20050EA60 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D49D204029774EE20050EA60 /* WorldTravelRouletteTests */ = {
+			isa = PBXGroup;
+			children = (
+				D49D204129774EE20050EA60 /* WorldTravelRouletteTests.swift */,
+			);
+			path = WorldTravelRouletteTests;
+			sourceTree = "<group>";
+		};
+		D49D204A29774EE20050EA60 /* WorldTravelRouletteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D49D204B29774EE20050EA60 /* WorldTravelRouletteUITests.swift */,
+				D49D204D29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift */,
+			);
+			path = WorldTravelRouletteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D49D202C29774EE00050EA60 /* WorldTravelRoulette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49D205129774EE20050EA60 /* Build configuration list for PBXNativeTarget "WorldTravelRoulette" */;
+			buildPhases = (
+				D49D202929774EE00050EA60 /* Sources */,
+				D49D202A29774EE00050EA60 /* Frameworks */,
+				D49D202B29774EE00050EA60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorldTravelRoulette;
+			productName = WorldTravelRoulette;
+			productReference = D49D202D29774EE00050EA60 /* WorldTravelRoulette.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D49D203C29774EE20050EA60 /* WorldTravelRouletteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49D205429774EE20050EA60 /* Build configuration list for PBXNativeTarget "WorldTravelRouletteTests" */;
+			buildPhases = (
+				D49D203929774EE20050EA60 /* Sources */,
+				D49D203A29774EE20050EA60 /* Frameworks */,
+				D49D203B29774EE20050EA60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D49D203F29774EE20050EA60 /* PBXTargetDependency */,
+			);
+			name = WorldTravelRouletteTests;
+			productName = WorldTravelRouletteTests;
+			productReference = D49D203D29774EE20050EA60 /* WorldTravelRouletteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D49D204629774EE20050EA60 /* WorldTravelRouletteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49D205729774EE20050EA60 /* Build configuration list for PBXNativeTarget "WorldTravelRouletteUITests" */;
+			buildPhases = (
+				D49D204329774EE20050EA60 /* Sources */,
+				D49D204429774EE20050EA60 /* Frameworks */,
+				D49D204529774EE20050EA60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D49D204929774EE20050EA60 /* PBXTargetDependency */,
+			);
+			name = WorldTravelRouletteUITests;
+			productName = WorldTravelRouletteUITests;
+			productReference = D49D204729774EE20050EA60 /* WorldTravelRouletteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D49D202529774EE00050EA60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D49D202C29774EE00050EA60 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D49D203C29774EE20050EA60 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D49D202C29774EE00050EA60;
+					};
+					D49D204629774EE20050EA60 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D49D202C29774EE00050EA60;
+					};
+				};
+			};
+			buildConfigurationList = D49D202829774EE00050EA60 /* Build configuration list for PBXProject "WorldTravelRoulette" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D49D202429774EE00050EA60;
+			productRefGroup = D49D202E29774EE00050EA60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D49D202C29774EE00050EA60 /* WorldTravelRoulette */,
+				D49D203C29774EE20050EA60 /* WorldTravelRouletteTests */,
+				D49D204629774EE20050EA60 /* WorldTravelRouletteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D49D202B29774EE00050EA60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D203829774EE20050EA60 /* Preview Assets.xcassets in Resources */,
+				D49D203529774EE20050EA60 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D203B29774EE20050EA60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D204529774EE20050EA60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D49D202929774EE00050EA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D203329774EE00050EA60 /* ContentView.swift in Sources */,
+				D49D203129774EE00050EA60 /* WorldTravelRouletteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D203929774EE20050EA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D204229774EE20050EA60 /* WorldTravelRouletteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D204329774EE20050EA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D204C29774EE20050EA60 /* WorldTravelRouletteUITests.swift in Sources */,
+				D49D204E29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D49D203F29774EE20050EA60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D49D202C29774EE00050EA60 /* WorldTravelRoulette */;
+			targetProxy = D49D203E29774EE20050EA60 /* PBXContainerItemProxy */;
+		};
+		D49D204929774EE20050EA60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D49D202C29774EE00050EA60 /* WorldTravelRoulette */;
+			targetProxy = D49D204829774EE20050EA60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D49D204F29774EE20050EA60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D49D205029774EE20050EA60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D49D205229774EE20050EA60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WorldTravelRoulette/Preview Content\"";
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.WorldTravelRoulette;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D49D205329774EE20050EA60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WorldTravelRoulette/Preview Content\"";
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.WorldTravelRoulette;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D49D205529774EE20050EA60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.WorldTravelRouletteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTravelRoulette.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorldTravelRoulette";
+			};
+			name = Debug;
+		};
+		D49D205629774EE20050EA60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.WorldTravelRouletteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTravelRoulette.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorldTravelRoulette";
+			};
+			name = Release;
+		};
+		D49D205829774EE20050EA60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.WorldTravelRouletteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorldTravelRoulette;
+			};
+			name = Debug;
+		};
+		D49D205929774EE20050EA60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.WorldTravelRouletteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorldTravelRoulette;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D49D202829774EE00050EA60 /* Build configuration list for PBXProject "WorldTravelRoulette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D204F29774EE20050EA60 /* Debug */,
+				D49D205029774EE20050EA60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D205129774EE20050EA60 /* Build configuration list for PBXNativeTarget "WorldTravelRoulette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D205229774EE20050EA60 /* Debug */,
+				D49D205329774EE20050EA60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D205429774EE20050EA60 /* Build configuration list for PBXNativeTarget "WorldTravelRouletteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D205529774EE20050EA60 /* Debug */,
+				D49D205629774EE20050EA60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D205729774EE20050EA60 /* Build configuration list for PBXNativeTarget "WorldTravelRouletteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D205829774EE20050EA60 /* Debug */,
+				D49D205929774EE20050EA60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D49D202529774EE00050EA60 /* Project object */;
+}
