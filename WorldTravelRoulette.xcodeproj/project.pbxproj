@@ -14,6 +14,8 @@
 		D49D204229774EE20050EA60 /* WorldTravelRouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D204129774EE20050EA60 /* WorldTravelRouletteTests.swift */; };
 		D49D204C29774EE20050EA60 /* WorldTravelRouletteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D204B29774EE20050EA60 /* WorldTravelRouletteUITests.swift */; };
 		D49D204E29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D204D29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift */; };
+		D49D205D297891C50050EA60 /* TravelRecordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D205C297891C50050EA60 /* TravelRecordScreen.swift */; };
+		D49D205F297891D10050EA60 /* RouletteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D205E297891D10050EA60 /* RouletteScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		D49D204729774EE20050EA60 /* WorldTravelRouletteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTravelRouletteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D204B29774EE20050EA60 /* WorldTravelRouletteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelRouletteUITests.swift; sourceTree = "<group>"; };
 		D49D204D29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelRouletteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D49D205C297891C50050EA60 /* TravelRecordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordScreen.swift; sourceTree = "<group>"; };
+		D49D205E297891D10050EA60 /* RouletteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		D49D202F29774EE00050EA60 /* WorldTravelRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				D49D205B297891AD0050EA60 /* TravelRecord */,
+				D49D205A297891A30050EA60 /* Roulette */,
 				D49D203029774EE00050EA60 /* WorldTravelRouletteApp.swift */,
 				D49D203229774EE00050EA60 /* ContentView.swift */,
 				D49D203429774EE20050EA60 /* Assets.xcassets */,
@@ -125,6 +131,22 @@
 				D49D204D29774EE20050EA60 /* WorldTravelRouletteUITestsLaunchTests.swift */,
 			);
 			path = WorldTravelRouletteUITests;
+			sourceTree = "<group>";
+		};
+		D49D205A297891A30050EA60 /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+				D49D205E297891D10050EA60 /* RouletteScreen.swift */,
+			);
+			path = Roulette;
+			sourceTree = "<group>";
+		};
+		D49D205B297891AD0050EA60 /* TravelRecord */ = {
+			isa = PBXGroup;
+			children = (
+				D49D205C297891C50050EA60 /* TravelRecordScreen.swift */,
+			);
+			path = TravelRecord;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +281,8 @@
 			files = (
 				D49D203329774EE00050EA60 /* ContentView.swift in Sources */,
 				D49D203129774EE00050EA60 /* WorldTravelRouletteApp.swift in Sources */,
+				D49D205D297891C50050EA60 /* TravelRecordScreen.swift in Sources */,
+				D49D205F297891D10050EA60 /* RouletteScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
