@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct TravelRecordScreen: View {
+    @ObservedObject var viewModel = TravelRecordViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        ForEach(viewModel.countries) { country in
+                            CountryLabelView(
+                                viewModel: viewModel,
+                                country: country,
+                                isButtonTapped: viewModel.isSavedCountry(country: country)
+                            )
+                                .padding(.horizontal, 16)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("どの国に行った？")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
