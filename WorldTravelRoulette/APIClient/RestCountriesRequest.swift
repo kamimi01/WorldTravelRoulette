@@ -21,7 +21,14 @@ extension RestCountriesRequest {
     }
 
     func buildURLRequest() -> URLRequest {
-        // TODO
+        let url = baseURL.appendingPathComponent(path)
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.url = components?.url
+        urlRequest.httpMethod = method.rawValue
+
+        return urlRequest
     }
 
     func response(from data: Data) -> Response {
