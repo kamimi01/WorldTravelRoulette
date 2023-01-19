@@ -31,7 +31,16 @@ extension RestCountriesRequest {
         return urlRequest
     }
 
-    func response(from data: Data) -> Response {
-        // TODO
+    func response(from data: Data, urlResponse: URLResponse) throws -> Response {
+        let decoder = JSONDecoder()
+
+        // URLResponseはHTTPレスポンスに限らない汎用的な型なので、HTTPURLResponseにダウンキャストする
+        if case(200..<300)? = (urlResponse as? HTTPURLResponse)?.statusCode {
+            // JSONからモデルをインスタンス化
+            return try decoder.decode(Response.self, from: data)
+        } else {
+            // JSONからAPIエラーをインスタンス化
+            throw try decoder.decode(RestCountriesAPIError.self, from: data)
+        }
     }
 }
