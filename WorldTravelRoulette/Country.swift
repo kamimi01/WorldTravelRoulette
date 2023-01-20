@@ -9,6 +9,7 @@ import Foundation
 
 struct Country: Identifiable {
     let id = UUID().uuidString
-    let commonNameJa: String
+    let commonName: String
+    let commonNameJa: String?
     let flagPng: String
 }

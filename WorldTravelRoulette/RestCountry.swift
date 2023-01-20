@@ -18,10 +18,10 @@ struct Name: Decodable {
 }
 
 struct Translation: Decodable {
-    let jpn: TranslatedName
+    let jpn: JpnName?
 }
 
-struct TranslatedName: Decodable {
+struct JpnName: Decodable {
     let common: String
 }
 

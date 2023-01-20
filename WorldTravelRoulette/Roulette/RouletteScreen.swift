@@ -26,7 +26,7 @@ struct RouletteScreen: View {
                 case .endRolling:
                     VStack(alignment: .center, spacing: 5) {
                         if let selectedCountry = viewModel.selectedCountry {
-                            Text(selectedCountry.commonNameJa)
+                            Text(selectedCountry.commonNameJa ?? selectedCountry.commonName)
                                 .font(.title)
                             Text("\nにいこう！")
                                 .font(.title2)

@@ -33,7 +33,7 @@ struct CountryLabelView: View {
                 }
             }
             .frame(width: 50, height: 50)
-            Text(country.commonNameJa)
+            Text(country.commonNameJa ?? country.commonName)
                 .font(.title)
             Spacer()
         }
@@ -43,6 +43,6 @@ struct CountryLabelView: View {
 
 struct CountryLabelView_Previews: PreviewProvider {
     static var previews: some View {
-        CountryLabelView(viewModel: TravelRecordViewModel(), country: Country(commonNameJa: "コンゴ民主共和国", flagPng: "https://flagcdn.com/w320/zm.png"), isButtonTapped: true)
+        CountryLabelView(viewModel: TravelRecordViewModel(), country: Country(commonName: "DR Congo", commonNameJa: "コンゴ民主共和国", flagPng: "https://flagcdn.com/w320/zm.png"), isButtonTapped: true)
     }
 }

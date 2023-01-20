@@ -29,6 +29,9 @@ struct TravelRecordScreen: View {
             .navigationTitle("どの国に行った？")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 
