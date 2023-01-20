@@ -12,4 +12,5 @@ struct Country: Identifiable {
     let commonName: String
     let commonNameJa: String?
     let flagPng: String
+    let googleMapURL: String
 }

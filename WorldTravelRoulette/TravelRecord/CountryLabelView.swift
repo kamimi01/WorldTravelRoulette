@@ -43,6 +43,6 @@ struct CountryLabelView: View {
 
 struct CountryLabelView_Previews: PreviewProvider {
     static var previews: some View {
-        CountryLabelView(viewModel: TravelRecordViewModel(), country: Country(commonName: "DR Congo", commonNameJa: "コンゴ民主共和国", flagPng: "https://flagcdn.com/w320/zm.png"), isButtonTapped: true)
+        CountryLabelView(viewModel: TravelRecordViewModel(), country: Country(commonName: "DR Congo", commonNameJa: "コンゴ民主共和国", flagPng: "https://flagcdn.com/w320/zm.png", googleMapURL: "https://goo.gl/maps/mweBcqvW8TppZW6q9"), isButtonTapped: true)
     }
 }

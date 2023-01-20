@@ -57,7 +57,8 @@ class TravelRecordViewModel: ObservableObject {
             let country = Country(
                 commonName: $0.name.common,
                 commonNameJa: $0.translations.jpn?.common,
-                flagPng: $0.flags.png
+                flagPng: $0.flags.png,
+                googleMapURL: $0.maps.googleMaps
             )
             tmpCountries.append(country)
         }
