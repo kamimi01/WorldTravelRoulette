@@ -36,6 +36,14 @@ struct CountryLabelView: View {
             Text(country.commonNameJa ?? country.commonName)
                 .font(.title)
             Spacer()
+            AsyncImage(url: URL(string: country.flagPng)) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 60)
         }
         .frame(maxWidth: .infinity)
     }
