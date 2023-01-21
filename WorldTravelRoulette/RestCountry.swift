@@ -12,6 +12,7 @@ struct RestCountry: Decodable {
     let translations: Translation
     let flags: Flags
     let maps: Maps
+    let capitalInfo: CapitalInfo
 }
 
 struct Name: Decodable {
@@ -32,4 +33,8 @@ struct Flags: Decodable {
 
 struct Maps: Decodable {
     let googleMaps: String
+}
+
+struct CapitalInfo: Decodable {
+    let latlang: [Double]?
 }

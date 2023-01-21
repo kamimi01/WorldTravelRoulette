@@ -13,4 +13,10 @@ struct Country: Identifiable {
     let commonNameJa: String?
     let flagPng: String
     let googleMapURL: String
+    let capitalLocation: Location
+}
+
+struct Location {
+    let lat: Double?
+    let lng: Double?
 }

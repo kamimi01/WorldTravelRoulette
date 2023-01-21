@@ -29,6 +29,8 @@
 		D49D207C2979F5830050EA60 /* CountryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D207B2979F5830050EA60 /* CountryLabelView.swift */; };
 		D49D207E2979F77D0050EA60 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D207D2979F77D0050EA60 /* LottieView.swift */; };
 		D49D20812979F7AF0050EA60 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D49D20802979F7AF0050EA60 /* Lottie */; };
+		D4C6D121297CA56B00029E0B /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6D120297CA56B00029E0B /* Array+Extension.swift */; };
+		D4C6D126297CA8E400029E0B /* three_two_one.json in Resources */ = {isa = PBXBuildFile; fileRef = D4C6D125297CA8E400029E0B /* three_two_one.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		D49D20792979F5400050EA60 /* TravelRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordViewModel.swift; sourceTree = "<group>"; };
 		D49D207B2979F5830050EA60 /* CountryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryLabelView.swift; sourceTree = "<group>"; };
 		D49D207D2979F77D0050EA60 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D4C6D120297CA56B00029E0B /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		D4C6D125297CA8E400029E0B /* three_two_one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = three_two_one.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		D49D202F29774EE00050EA60 /* WorldTravelRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				D4C6D122297CA57600029E0B /* Extension */,
 				D49D206C297899A10050EA60 /* APIClient */,
 				D49D205B297891AD0050EA60 /* TravelRecord */,
 				D49D205A297891A30050EA60 /* Roulette */,
@@ -133,6 +138,7 @@
 				D49D203629774EE20050EA60 /* Preview Content */,
 				D49D2062297892BA0050EA60 /* Country.swift */,
 				D49D2064297897560050EA60 /* RestCountry.swift */,
+				D4C6D125297CA8E400029E0B /* three_two_one.json */,
 				D49D207D2979F77D0050EA60 /* LottieView.swift */,
 			);
 			path = WorldTravelRoulette;
@@ -193,6 +199,14 @@
 				D49D20772979F1D30050EA60 /* RestCountriesClient.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		D4C6D122297CA57600029E0B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6D120297CA56B00029E0B /* Array+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49D203829774EE20050EA60 /* Preview Assets.xcassets in Resources */,
+				D4C6D126297CA8E400029E0B /* three_two_one.json in Resources */,
 				D49D203529774EE20050EA60 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +349,7 @@
 				D49D207229789A1E0050EA60 /* RestCountriesRequest.swift in Sources */,
 				D49D207E2979F77D0050EA60 /* LottieView.swift in Sources */,
 				D49D203329774EE00050EA60 /* ContentView.swift in Sources */,
+				D4C6D121297CA56B00029E0B /* Array+Extension.swift in Sources */,
 				D49D203129774EE00050EA60 /* WorldTravelRouletteApp.swift in Sources */,
 				D49D205D297891C50050EA60 /* TravelRecordScreen.swift in Sources */,
 				D49D205F297891D10050EA60 /* RouletteScreen.swift in Sources */,

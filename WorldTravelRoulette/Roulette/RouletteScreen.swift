@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct RouletteScreen: View {
     @ObservedObject var viewModel = RouletteScreenViewModel()
+    @State var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(
+            latitude: 51.5,
+            longitude: -0.08
+        ),
+        latitudinalMeters: 1000 * 1000,
+        longitudinalMeters: 1000 * 1000
+    )
 
     var body: some View {
 
@@ -16,32 +25,42 @@ struct RouletteScreen: View {
             VStack(spacing: 20) {
                 switch viewModel.rouletteStatus {
                 case .notRolling:
+                    Spacer()
                     Text("ボタンを押してね👇")
                         .font(.title)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 100)
                 case .rolling:
+                    Spacer()
                     LottieView(animationType: .oneTwoThree)
-                        .frame(width: 100, height: 100)
+                        .frame(width: 100)
                 case .endRolling:
                     VStack(alignment: .center, spacing: 5) {
                         if let selectedCountry = viewModel.selectedCountry {
-                            Text(selectedCountry.commonNameJa ?? selectedCountry.commonName)
-                                .font(.title)
+                            HStack(spacing: 10) {
+                                Text(selectedCountry.commonNameJa ?? selectedCountry.commonName)
+                                    .font(.title)
+                                AsyncImage(url: URL(string: selectedCountry.flagPng)) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFit()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(width: 60)
+                            }
                             Text("\nにいこう！")
                                 .font(.title2)
+                            Map(coordinateRegion: $region)
                         } else {
                             Text("全部行ったね！すごい！🎉")
                                 .font(.title)
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    .frame(height: 100)
+                    .frame(maxHeight: .infinity)
+                    .border(Color.red)
                 }
-                HStack {
-                    Image("")
-                    Image("")
-                }
+                Spacer()
                 Button(action: {
                     viewModel.startRoulette()
                 }) {
