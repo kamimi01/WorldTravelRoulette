@@ -11,6 +11,7 @@ import Lottie
 
 enum AnimationType: String {
     case oneTwoThree = "three_two_one"
+    case loading = "loading"
 }
 
 struct LottieView: UIViewRepresentable {

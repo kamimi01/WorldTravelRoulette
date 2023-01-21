@@ -12,8 +12,16 @@ enum ButtonStatus {
     case notSelected
 }
 
+enum RetreiveStatus {
+    case empty
+    case loading
+    case success
+    case failure
+}
+
 class TravelRecordViewModel: ObservableObject {
     @Published var countries = [Country]()
+    @Published var retreiveStatus = RetreiveStatus.empty
 
     func onAppear() {
         getAllCountries()
@@ -36,6 +44,7 @@ class TravelRecordViewModel: ObservableObject {
         let client = RestCountriesClient()
         let request = RestCountriesAPI.GetAllCountries()
 
+        retreiveStatus = .loading
         client.send(request: request) { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -43,9 +52,13 @@ class TravelRecordViewModel: ObservableObject {
                 print(response)
                 DispatchQueue.main.async {
                     self.countries = self.convertType(from: response)
+                    self.retreiveStatus = .success
                 }
             case let .failure(error):
                 print(error)
+                DispatchQueue.main.async {
+                    self.retreiveStatus = .failure
+                }
             }
         }
     }

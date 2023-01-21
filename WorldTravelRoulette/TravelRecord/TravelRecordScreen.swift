@@ -12,17 +12,35 @@ struct TravelRecordScreen: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 20) {
-                        ForEach(viewModel.countries) { country in
-                            CountryLabelView(
-                                viewModel: viewModel,
-                                country: country,
-                                isButtonTapped: viewModel.isSavedCountry(country: country)
-                            )
-                                .padding(.horizontal, 16)
+            Group {
+                switch viewModel.retreiveStatus {
+                case .empty:
+                    Text("空です。")
+                case .loading:
+                    LottieView(animationType: .loading)
+                case .success:
+                    VStack {
+                        ScrollView {
+                            VStack(alignment: .leading, spacing: 20) {
+                                ForEach(viewModel.countries) { country in
+                                    CountryLabelView(
+                                        viewModel: viewModel,
+                                        country: country,
+                                        isButtonTapped: viewModel.isSavedCountry(country: country)
+                                    )
+                                        .padding(.horizontal, 16)
+                                }
+                            }
                         }
+                    }
+                case .failure:
+                    VStack {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(.orange)
+                        Text("エラーが発生しました")
                     }
                 }
             }
