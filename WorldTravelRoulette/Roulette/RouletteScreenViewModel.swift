@@ -15,7 +15,16 @@ enum RouletteStatus {
 
 class RouletteScreenViewModel: ObservableObject {
     @Published var rouletteStatus = RouletteStatus.notRolling
-    @Published var selectedCountry: Country? = nil
+    @Published var selectedCountry = Country(
+        commonName: "Japan",
+        commonNameJa: "日本",
+        flagPng: "https://flagcdn.com/w320/jp.png",
+        googleMapURL: "https://goo.gl/maps/NGTLSCSrA8bMrvnX9",
+        capitalLocation: Location(
+            lat: 35.68,
+            lng: 139.75
+        )
+    )
 
     func startRoulette() {
         rouletteStatus = .rolling

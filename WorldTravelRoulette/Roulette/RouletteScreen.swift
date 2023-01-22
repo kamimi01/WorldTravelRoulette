@@ -12,8 +12,8 @@ struct RouletteScreen: View {
     @ObservedObject var viewModel = RouletteScreenViewModel()
     @State var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
-            latitude: 51.5,
-            longitude: -0.08
+            latitude: 35.68,
+            longitude: 139.75
         ),
         latitudinalMeters: 1000 * 1000,
         longitudinalMeters: 1000 * 1000
@@ -24,16 +24,11 @@ struct RouletteScreen: View {
         NavigationView {
             VStack(spacing: 20) {
                 switch viewModel.rouletteStatus {
-                case .notRolling:
-                    Spacer()
-                    Text("ボタンを押してね👇")
-                        .font(.title)
-                        .frame(maxWidth: .infinity)
                 case .rolling:
                     Spacer()
                     LottieView(animationType: .oneTwoThree)
                         .frame(width: 100)
-                case .endRolling:
+                case .notRolling, .endRolling:
                     VStack(alignment: .center, spacing: 5) {
                         if let selectedCountry = viewModel.selectedCountry {
                             HStack(spacing: 10) {
