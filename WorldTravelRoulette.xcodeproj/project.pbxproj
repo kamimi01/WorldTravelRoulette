@@ -141,7 +141,6 @@
 				D49D203429774EE20050EA60 /* Assets.xcassets */,
 				D49D203629774EE20050EA60 /* Preview Content */,
 				D49D2062297892BA0050EA60 /* Country.swift */,
-				D49D2064297897560050EA60 /* RestCountry.swift */,
 				D49D207D2979F77D0050EA60 /* LottieView.swift */,
 				D4C6D125297CA8E400029E0B /* three_two_one.json */,
 				D4C6D127297CAC3200029E0B /* loading.json */,
@@ -203,6 +202,7 @@
 				D49D207329789DD90050EA60 /* RestCountriesClientError.swift */,
 				D49D207529789E170050EA60 /* RestCountriesAPIError.swift */,
 				D49D20772979F1D30050EA60 /* RestCountriesClient.swift */,
+				D49D2064297897560050EA60 /* RestCountry.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";

@@ -88,8 +88,8 @@ class TravelRecordViewModel: ObservableObject {
                 flagPng: $0.flags.png,
                 googleMapURL: $0.maps.googleMaps,
                 capitalLocation: Location(
-                    lat: $0.capitalInfo.latlang?[safe: 0],
-                    lng: $0.capitalInfo.latlang?[safe: 1]
+                    lat: $0.capitalInfo.latlng?[safe: 0],
+                    lng: $0.capitalInfo.latlng?[safe: 1]
                 )
             )
             tmpCountries.append(country)

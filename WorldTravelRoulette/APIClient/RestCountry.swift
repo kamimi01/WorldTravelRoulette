@@ -36,5 +36,5 @@ struct Maps: Decodable {
 }
 
 struct CapitalInfo: Decodable {
-    let latlang: [Double]?
+    let latlng: [Double]?
 }
