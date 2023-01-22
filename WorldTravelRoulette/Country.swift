@@ -14,6 +14,7 @@ struct Country: Identifiable {
     let flagPng: String
     let googleMapURL: String
     let capitalLocation: Location
+    var isSelected: Bool = false
 }
 
 struct Location {
