@@ -28,7 +28,7 @@ class TravelRecordViewModel: ObservableObject {
     }
 
     func isSavedCountry(country: Country) -> Bool {
-        guard let countries = loadCachedData() else {
+        guard let countries = DataManager.loadCachedData() else {
             return false
         }
         if let isSelected = countries.filter({ $0.commonName == country.commonName }).first?.isSelected {
@@ -50,7 +50,7 @@ class TravelRecordViewModel: ObservableObject {
     private func getAllCountries() {
         retreiveStatus = .loading
 
-        if let countries = loadCachedData() {
+        if let countries = DataManager.loadCachedData() {
             self.countries = countries
             self.retreiveStatus = .success
         } else {
@@ -132,24 +132,9 @@ class TravelRecordViewModel: ObservableObject {
         saveCountry(countries: newCountries)
     }
 
-    private func loadCachedData() -> [Country]? {
-        guard let datas = UserDefaults.standard.array(forKey: "countries") as? [Data] else {
-            return nil
-        }
-
-        var countries = [Country]()
-        datas.forEach {
-            guard let country = try? JSONDecoder().decode(Country.self, from: $0) else {
-                fatalError("failed to decode")
-            }
-            countries.append(country)
-        }
-        return countries
-    }
-
     private func changeStatus(of isSelected: Bool, country: Country) -> [Country]? {
         // 1. UserDefaultsから全データを取得する
-        guard var countries = loadCachedData() else { return nil }
+        guard var countries = DataManager.loadCachedData() else { return nil }
 
         // 2. 該当のcountryのisSelectedを指定された値に変える
         if let index = countries.firstIndex(where: { $0.commonName == country.commonName }) {

@@ -32,6 +32,7 @@
 		D4C6D121297CA56B00029E0B /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6D120297CA56B00029E0B /* Array+Extension.swift */; };
 		D4C6D126297CA8E400029E0B /* three_two_one.json in Resources */ = {isa = PBXBuildFile; fileRef = D4C6D125297CA8E400029E0B /* three_two_one.json */; };
 		D4C6D128297CAC3200029E0B /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D4C6D127297CAC3200029E0B /* loading.json */; };
+		D4C6D132297DE46200029E0B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6D131297DE46200029E0B /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D4C6D120297CA56B00029E0B /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		D4C6D125297CA8E400029E0B /* three_two_one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = three_two_one.json; sourceTree = "<group>"; };
 		D4C6D127297CAC3200029E0B /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		D4C6D131297DE46200029E0B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				D49D207D2979F77D0050EA60 /* LottieView.swift */,
 				D4C6D125297CA8E400029E0B /* three_two_one.json */,
 				D4C6D127297CAC3200029E0B /* loading.json */,
+				D4C6D131297DE46200029E0B /* DataManager.swift */,
 			);
 			path = WorldTravelRoulette;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				D49D203129774EE00050EA60 /* WorldTravelRouletteApp.swift in Sources */,
 				D49D205D297891C50050EA60 /* TravelRecordScreen.swift in Sources */,
 				D49D205F297891D10050EA60 /* RouletteScreen.swift in Sources */,
+				D4C6D132297DE46200029E0B /* DataManager.swift in Sources */,
 				D49D207A2979F5400050EA60 /* TravelRecordViewModel.swift in Sources */,
 				D49D206E297899B50050EA60 /* HTTPMethod.swift in Sources */,
 				D49D2063297892BA0050EA60 /* Country.swift in Sources */,
