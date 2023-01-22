@@ -19,17 +19,15 @@ struct TravelRecordScreen: View {
                 case .loading:
                     LottieView(animationType: .loading)
                 case .success:
-                    VStack {
-                        ScrollView {
-                            VStack(alignment: .leading, spacing: 20) {
-                                ForEach(viewModel.countries) { country in
-                                    CountryLabelView(
-                                        viewModel: viewModel,
-                                        country: country,
-                                        isButtonTapped: viewModel.isSavedCountry(country: country)
-                                    )
-                                        .padding(.horizontal, 16)
-                                }
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 20) {
+                            ForEach(viewModel.countries) { country in
+                                CountryLabelView(
+                                    viewModel: viewModel,
+                                    country: country,
+                                    isButtonTapped: viewModel.isSavedCountry(country: country)
+                                )
+                                .padding(.horizontal, 16)
                             }
                         }
                     }
