@@ -110,12 +110,19 @@ class TravelRecordViewModel: ObservableObject {
     private func saveSelectedCountry(_ country: Country) {
         // TODO: UserDefaultsのisSelectedをtrueに書き換える
         // 1. UserDefaultsから全データを取得する
-        let countries = loadCachedData()
+        // 2. 該当のcountryのisSelectedをtrueに変える
+        guard let newCountries = changeStatus(of: true, country: country) else { return }
+        // 3. 全削除して保存し直す
+        saveCountry(countries: newCountries)
     }
 
     private func deleteSelectedCountry(_ country: Country) {
         // TODO: UserDefaultsのisSelectedをfalseに書き換える
-        let countries = loadCachedData()
+        // 1. UserDefaultsから全データを取得する
+        // 2. 該当のcountryのisSelectedをfalseに変える
+        guard let newCountries = changeStatus(of: false, country: country) else { return }
+        // 3. 全削除して保存し直す
+        saveCountry(countries: newCountries)
     }
 
     private func loadCachedData() -> [Country]? {
@@ -131,5 +138,25 @@ class TravelRecordViewModel: ObservableObject {
             countries.append(country)
         }
         return countries
+    }
+
+    private func changeStatus(of isSelected: Bool, country: Country) -> [Country]? {
+        // 1. UserDefaultsから全データを取得する
+        guard var countries = loadCachedData() else { return nil }
+
+        // 2. 該当のcountryのisSelectedを指定された値に変える
+        if let index = countries.firstIndex(where: { $0.commonName == country.commonName }) {
+            if countries[safe: index] != nil {
+                countries[index].isSelected = isSelected
+            }
+        }
+        return countries
+    }
+
+    private func saveCountry(countries: [Country]) {
+        // 一旦全削除する
+        UserDefaults.standard.removeObject(forKey: "countries")
+        // TODO: 保存し直す
+        saveCountries(countries)
     }
 }
