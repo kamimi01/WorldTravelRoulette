@@ -28,7 +28,14 @@ class TravelRecordViewModel: ObservableObject {
     }
 
     func isSavedCountry(country: Country) -> Bool {
-        return true
+        guard let countries = loadCachedData() else {
+            return false
+        }
+        if let isSelected = countries.filter({ $0.commonName == country.commonName }).first?.isSelected {
+            return isSelected
+        } else {
+            return false
+        }
     }
 
     func didTapButton(buttonStatus: ButtonStatus, country: Country) {
