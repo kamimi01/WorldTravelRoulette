@@ -10,19 +10,11 @@ import MapKit
 
 struct RouletteScreen: View {
     @ObservedObject var viewModel = RouletteScreenViewModel()
-    @State var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(
-            latitude: 35.68,
-            longitude: 139.75
-        ),
-        latitudinalMeters: 1000 * 1000,
-        longitudinalMeters: 1000 * 1000
-    )
 
     var body: some View {
         NavigationView {
             ZStack {
-                Map(coordinateRegion: $region)
+                Map(coordinateRegion: $viewModel.selectedRegion)
                     .frame(maxWidth: .infinity)
                     .frame(maxHeight: .infinity)
                 VStack {

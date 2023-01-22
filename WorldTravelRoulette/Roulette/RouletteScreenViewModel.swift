@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 enum RouletteStatus {
     case notRolling
@@ -25,20 +26,37 @@ class RouletteScreenViewModel: ObservableObject {
             lng: 139.75
         )
     )
+    @Published var selectedRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(
+            latitude: 35.68,  // 日本
+            longitude: 139.75  // 日本
+        ),
+        latitudinalMeters: 1000 * 1000,
+        longitudinalMeters: 1000 * 1000
+    )
 
     func startRoulette() {
         rouletteStatus = .rolling
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+            guard let self = self else { return }
             self.rouletteStatus = .endRolling
+
+            // TODO: 仮実装
+            self.selectedCountry = Country(commonName: "british", commonNameJa: "イギリス", flagPng: "https://flagcdn.com/w320/zm.png", googleMapURL: "https://goo.gl/maps/mweBcqvW8TppZW6q9", capitalLocation: Location(lat: 51.5, lng: -0.08))
+            self.selectedRegion = MKCoordinateRegion(
+                center: CLLocationCoordinate2D(
+                    latitude: 51.5,
+                    longitude: -0.08
+                ),
+                latitudinalMeters: 1000 * 1000,
+                longitudinalMeters: 1000 * 1000
+            )
+
+            // 行ったことがある国を取得する
+
+            // 行ったことのない国を取得
+
+            // 行ったことのない国からランダムで選択する
         }
-
-        // TODO: 仮実装
-        selectedCountry = Country(commonName: "congo", commonNameJa: "コンゴ", flagPng: "https://flagcdn.com/w320/zm.png", googleMapURL: "https://goo.gl/maps/mweBcqvW8TppZW6q9", capitalLocation: Location(lat: 51.5, lng: -0.08))
-
-        // 行ったことがある都道府県を取得する
-
-        // 行ったことのない都道府県を取得
-
-        // 行ったことのない都道府県からランダムで選択する
     }
 }
