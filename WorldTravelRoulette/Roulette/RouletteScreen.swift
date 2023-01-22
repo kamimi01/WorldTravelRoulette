@@ -40,7 +40,7 @@ struct RouletteScreen: View {
                                         .font(.title)
                                 }
                             } else {
-                                Text("全部行ったね！すごい！🎉")
+                                Text("全部行ったよ！すごい！🎉")
                                     .font(.title)
                             }
                         }
@@ -64,6 +64,7 @@ struct RouletteScreen: View {
                             .clipShape(Circle())
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
                     }
+                    .padding(.bottom, 16)
                 }
             }
             .navigationTitle("次はどこへ行く？")
