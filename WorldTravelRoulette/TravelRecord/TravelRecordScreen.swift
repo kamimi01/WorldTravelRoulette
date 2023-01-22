@@ -20,7 +20,7 @@ struct TravelRecordScreen: View {
                     LottieView(animationType: .loading)
                 case .success:
                     ScrollView {
-                        VStack(alignment: .leading, spacing: 20) {
+                        LazyVStack(alignment: .leading, spacing: 20) {
                             ForEach(viewModel.countries) { country in
                                 CountryLabelView(
                                     viewModel: viewModel,
