@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country: Identifiable {
+struct Country: Identifiable, Codable {
     let id = UUID().uuidString
     let commonName: String
     let commonNameJa: String?
@@ -17,7 +17,7 @@ struct Country: Identifiable {
     var isSelected: Bool = false
 }
 
-struct Location {
+struct Location: Codable {
     let lat: Double?
     let lng: Double?
 }

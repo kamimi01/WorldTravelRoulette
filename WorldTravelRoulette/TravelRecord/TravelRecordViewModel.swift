@@ -41,29 +41,31 @@ class TravelRecordViewModel: ObservableObject {
     }
 
     private func getAllCountries() {
-        // TODO: UserDefaultsにデータがあればそこから取得する
-
-        // TODO: なければAPIコールを読んで取得する
-
-        let client = RestCountriesClient()
-        let request = RestCountriesAPI.GetAllCountries()
-
         retreiveStatus = .loading
-        client.send(request: request) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case let .success(response):
-                print(response)
-                DispatchQueue.main.async {
-                    let countries = self.convertType(from: response)
-                    self.saveCountries(countries)
-                    self.countries = countries
-                    self.retreiveStatus = .success
-                }
-            case let .failure(error):
-                print(error)
-                DispatchQueue.main.async {
-                    self.retreiveStatus = .failure
+
+        if let countries = loadCachedData() {
+            self.countries = countries
+            self.retreiveStatus = .success
+        } else {
+            let client = RestCountriesClient()
+            let request = RestCountriesAPI.GetAllCountries()
+
+            client.send(request: request) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case let .success(response):
+                    print(response)
+                    DispatchQueue.main.async {
+                        let countries = self.convertType(from: response)
+                        self.saveCountries(countries)
+                        self.countries = countries
+                        self.retreiveStatus = .success
+                    }
+                case let .failure(error):
+                    print(error)
+                    DispatchQueue.main.async {
+                        self.retreiveStatus = .failure
+                    }
                 }
             }
         }
@@ -91,13 +93,43 @@ class TravelRecordViewModel: ObservableObject {
     private func saveCountries(_ countries: [Country]) {
         // TODO: UserDefaultsにデータを保存する
         // 保存方法1: CountryにisSelectedを持たせて、その値を書き換えることで状態を管理する（データを全て取り出す→書き換えたい値を探す→isSelectedを書き換える→保存する）
+        // TODO: エンコードしてData型の配列を作成する
+        var datas = [Data]()
+        countries.forEach {
+            guard let data = try? JSONEncoder().encode($0) else {
+                fatalError("failed to encode")
+            }
+            datas.append(data)
+        }
+
+        UserDefaults.standard.set(datas, forKey: "countries")
+
+        print(datas)
     }
 
     private func saveSelectedCountry(_ country: Country) {
         // TODO: UserDefaultsのisSelectedをtrueに書き換える
+        // 1. UserDefaultsから全データを取得する
+        let countries = loadCachedData()
     }
 
     private func deleteSelectedCountry(_ country: Country) {
         // TODO: UserDefaultsのisSelectedをfalseに書き換える
+        let countries = loadCachedData()
+    }
+
+    private func loadCachedData() -> [Country]? {
+        guard let datas = UserDefaults.standard.array(forKey: "countries") as? [Data] else {
+            return nil
+        }
+
+        var countries = [Country]()
+        datas.forEach {
+            guard let country = try? JSONDecoder().decode(Country.self, from: $0) else {
+                fatalError("failed to decode")
+            }
+            countries.append(country)
+        }
+        return countries
     }
 }
