@@ -22,9 +22,11 @@ enum RetreiveStatus {
 class TravelRecordViewModel: ObservableObject {
     @Published var countries = [Country]()
     @Published var retreiveStatus = RetreiveStatus.empty
+    @Published var numOfCountries = 0
 
     func onAppear() {
         getAllCountries()
+        getHaveBeenToCountries()
     }
 
     func isSavedCountry(country: Country) -> Bool {
@@ -121,6 +123,7 @@ class TravelRecordViewModel: ObservableObject {
         guard let newCountries = changeStatus(of: true, country: country) else { return }
         // 3. 全削除して保存し直す
         saveCountry(countries: newCountries)
+        numOfCountries += 1
     }
 
     private func deleteSelectedCountry(_ country: Country) {
@@ -130,6 +133,7 @@ class TravelRecordViewModel: ObservableObject {
         guard let newCountries = changeStatus(of: false, country: country) else { return }
         // 3. 全削除して保存し直す
         saveCountry(countries: newCountries)
+        numOfCountries -= 1
     }
 
     private func changeStatus(of isSelected: Bool, country: Country) -> [Country]? {
@@ -150,5 +154,11 @@ class TravelRecordViewModel: ObservableObject {
         UserDefaults.standard.removeObject(forKey: "countries")
         // TODO: 保存し直す
         saveCountries(countries)
+    }
+
+    private func getHaveBeenToCountries() {
+        guard let countries = DataManager.loadCachedData() else { return }
+        let haveBeenToCountries = countries.filter({ $0.isSelected == true })
+        numOfCountries = haveBeenToCountries.count
     }
 }

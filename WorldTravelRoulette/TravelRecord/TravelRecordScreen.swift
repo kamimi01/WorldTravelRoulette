@@ -12,7 +12,10 @@ struct TravelRecordScreen: View {
 
     var body: some View {
         NavigationView {
-            Group {
+            VStack {
+                CircularProgressbarView(numOfCountries: $viewModel.numOfCountries, numOfAllCountries: viewModel.countries.count)
+                    .frame(width: 150, height: 150)
+                    .padding()
                 switch viewModel.retreiveStatus {
                 case .empty:
                     Text("空です。")

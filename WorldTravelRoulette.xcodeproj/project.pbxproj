@@ -33,6 +33,7 @@
 		D4C6D126297CA8E400029E0B /* three_two_one.json in Resources */ = {isa = PBXBuildFile; fileRef = D4C6D125297CA8E400029E0B /* three_two_one.json */; };
 		D4C6D128297CAC3200029E0B /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D4C6D127297CAC3200029E0B /* loading.json */; };
 		D4C6D132297DE46200029E0B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6D131297DE46200029E0B /* DataManager.swift */; };
+		D4C6D138297EB55B00029E0B /* CircularProgressbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6D137297EB55B00029E0B /* CircularProgressbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D4C6D125297CA8E400029E0B /* three_two_one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = three_two_one.json; sourceTree = "<group>"; };
 		D4C6D127297CAC3200029E0B /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		D4C6D131297DE46200029E0B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D4C6D137297EB55B00029E0B /* CircularProgressbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				D49D205C297891C50050EA60 /* TravelRecordScreen.swift */,
 				D49D207B2979F5830050EA60 /* CountryLabelView.swift */,
 				D49D20792979F5400050EA60 /* TravelRecordViewModel.swift */,
+				D4C6D137297EB55B00029E0B /* CircularProgressbarView.swift */,
 			);
 			path = TravelRecord;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				D49D205F297891D10050EA60 /* RouletteScreen.swift in Sources */,
 				D4C6D132297DE46200029E0B /* DataManager.swift in Sources */,
 				D49D207A2979F5400050EA60 /* TravelRecordViewModel.swift in Sources */,
+				D4C6D138297EB55B00029E0B /* CircularProgressbarView.swift in Sources */,
 				D49D206E297899B50050EA60 /* HTTPMethod.swift in Sources */,
 				D49D2063297892BA0050EA60 /* Country.swift in Sources */,
 				D49D207C2979F5830050EA60 /* CountryLabelView.swift in Sources */,
@@ -527,7 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"WorldTravelRoulette/Preview Content\"";
 				DEVELOPMENT_TEAM = 95L82PNXV3;
 				ENABLE_PREVIEWS = YES;
@@ -558,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"WorldTravelRoulette/Preview Content\"";
 				DEVELOPMENT_TEAM = 95L82PNXV3;
 				ENABLE_PREVIEWS = YES;
